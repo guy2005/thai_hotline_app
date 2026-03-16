@@ -38,7 +38,7 @@ class _SubAHomeUiState extends State<SubAHomeUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[50], // ปรับพื้นหลังแอปให้เป็นสีเทาอ่อนมากๆ เพื่อให้การ์ดดูป๊อปอัปขึ้นมา
       appBar: AppBar(
         backgroundColor: Colors.brown,
         elevation: 0,
@@ -58,38 +58,52 @@ class _SubAHomeUiState extends State<SubAHomeUi> {
       ),
       body: Column(
         children: [
+          const SizedBox(height: 25),
+          const Text('สายด่วน\nการเดินทาง', textAlign: TextAlign.center, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.brown)),
           const SizedBox(height: 20),
-          const Text('สายด่วน\nการเดินทาง', textAlign: TextAlign.center, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 15),
+          // ✨ ปรับแต่งไอคอนด้านบนให้เป็นวงกลมมีเงา
           Container(
-            width: 150, height: 150,
-            decoration: BoxDecoration(color: Colors.brown[50], borderRadius: BorderRadius.circular(10)),
-            child: Icon(Icons.directions_car, size: 80, color: Colors.brown[800]),
+            width: 120, height: 120,
+            decoration: BoxDecoration(
+              color: Colors.white, 
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(color: Colors.brown.withOpacity(0.2), blurRadius: 15, offset: const Offset(0, 5)),
+              ]
+            ),
+            child: Icon(Icons.directions_car, size: 60, color: Colors.brown[700]),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 25),
           Expanded(
             child: ListView.builder(
+              physics: const BouncingScrollPhysics(), // เพิ่มเด้งๆ เวลาเลื่อนสุด
               itemCount: hotlines.length,
               itemBuilder: (context, index) {
                 return Card(
+                  color: Colors.white, 
                   margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                  elevation: 2,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10), side: BorderSide(color: Colors.grey.shade300, width: 1)),
+                  elevation: 2, // เงาการ์ดนุ่มๆ
+                  shadowColor: Colors.black26,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)), // โค้งมนสวยงาม
                   child: ListTile(
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8), // เพิ่มพื้นที่หายใจให้เนื้อหา
                     leading: Container(
-                      width: 50, height: 50,
-                      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8), border: Border.all(color: Colors.grey.shade400)),
+                      width: 55, height: 55,
+                      decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(10)),
                       clipBehavior: Clip.antiAlias,
                       child: (hotlines[index]['image'] != null && hotlines[index]['image']!.isNotEmpty)
-                          ? Image.asset(hotlines[index]['image']!, fit: BoxFit.cover)
+                          ? Image.asset(hotlines[index]['image']!, fit: BoxFit.fill) 
                           : const Icon(Icons.image, color: Colors.grey),
                     ),
-                    title: Text(hotlines[index]['name']!, style: const TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: Text(hotlines[index]['phone']!, style: const TextStyle(fontSize: 16, color: Colors.grey)),
-                    trailing: IconButton(
-                      icon: const Icon(Icons.phone_outlined, color: Colors.purple),
-                      onPressed: () => _makePhoneCall(hotlines[index]['phone']!),
+                    title: Text(hotlines[index]['name']!, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                    subtitle: Text(hotlines[index]['phone']!, style: TextStyle(fontSize: 15, color: Colors.grey[600], fontWeight: FontWeight.w500)),
+                    // ✨ ปรับปุ่มโทรให้เป็นวงกลมสีเขียว
+                    trailing: Container(
+                      decoration: BoxDecoration(color: Colors.green[50], shape: BoxShape.circle),
+                      child: IconButton(
+                        icon: const Icon(Icons.phone, color: Colors.green),
+                        onPressed: () => _makePhoneCall(hotlines[index]['phone']!),
+                      ),
                     ),
                   ),
                 );
@@ -98,7 +112,6 @@ class _SubAHomeUiState extends State<SubAHomeUi> {
           ),
         ],
       ),
-      // เอา BottomNavigationBar ออกแล้ว!
     );
   }
 }

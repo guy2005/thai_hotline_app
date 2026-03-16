@@ -1,16 +1,19 @@
-# thai_hotline_app
+# 📱 Thai Hotline App (แอปพลิเคชันรวมเบอร์สายด่วน)
 
-A new Flutter project.
+แอปพลิเคชันสำหรับรวบรวมเบอร์โทรศัพท์สายด่วนที่สำคัญในประเทศไทย แบ่งเป็น 4 หมวดหมู่ เพื่อความสะดวกและรวดเร็วในการติดต่อในยามฉุกเฉิน หรือเมื่อต้องการความช่วยเหลือ
 
-## Getting Started
+## 🌟 ฟีเจอร์หลัก (Features)
+- 🚗 **หมวดการเดินทาง:** เบอร์โทรฉุกเฉินเกี่ยวกับการเดินทาง, รถเมล์, ทางด่วน, ตำรวจทางหลวง
+- 🚑 **หมวดอุบัติเหตุ-เหตุฉุกเฉิน:** แจ้งเหตุด่วนเหตุร้าย, กู้ชีพ, ดับเพลิง
+- 🏦 **หมวดธนาคาร:** อายัดบัตร, สอบถามข้อมูลธนาคารต่างๆ
+- 💡 **หมวดสาธารณูปโภค:** แจ้งไฟฟ้าขัดข้อง, น้ำประปา, อินเทอร์เน็ต
 
-This project is a starting point for a Flutter application.
+## 📸 ภาพตัวอย่างแอปพลิเคชัน (Screenshots)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+---
+**ผู้จัดทำ:** นาย ภควัตร เอมละออ (รหัสนักศึกษา: 6752410017)  
+**คณะ:** ศิลปศาสตร์เเละวิทยาศาสตร์ | **สาขาวิชา:** การพัฒนาโปรเเกรมประยุกต์สำหรับอุปกรณ์เคลื่อนที่  
+มหาวิทยาลัยเอเชียอาคเนย์

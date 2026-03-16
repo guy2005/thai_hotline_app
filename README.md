@@ -10,15 +10,13 @@
 
 ## 📸 ภาพตัวอย่างแอปพลิเคชัน (Screenshots)
 
-
 <p align="center">
-  <img src="Hotline_splash_screen_ui.png" width="180">
-  <img src="Hotline_A.png" width="180">
-  <img src="Hotline_B.png" width="180">
-  <img src="Hotline_C.png" width="180">
-  <img src="Hotline_D.png" width="180">
+  <img src="assets/images/Hotline_splash_screen_ui.png" width="180">
+  <img src="assets/images/Hotline_A.png" width="180">
+  <img src="assets/images/Hotline_B.png" width="180">
+  <img src="assets/images/Hotline_C.png" width="180">
+  <img src="assets/images/Hotline_D.png" width="180">
 </p>
-
 ---
 **ผู้จัดทำ:** นาย ภควัตร เอมละออ (รหัสนักศึกษา: 6752410017)  
 **คณะ:** ศิลปศาสตร์เเละวิทยาศาสตร์ | **สาขาวิชา:** การพัฒนาโปรเเกรมประยุกต์สำหรับอุปกรณ์เคลื่อนที่  
